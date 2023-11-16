@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="LeftMenu" style="left: 0; height: 85%; width: 450px; background-color: rgba(0, 0, 0, 0.55); flex-direction: column;">
+        <ui:VisualElement name="ControlPanel" style="height: auto; flex-grow: 0;">
+            <ui:VisualElement name="SelectPathContainer" style="margin-bottom: 10px; padding-bottom: 10px; border-bottom-color: rgb(0, 0, 0); border-bottom-width: 2px;">
+                <ui:Button text="Select Wildstar Path" display-tooltip-when-elided="true" name="selectPathBtn" style="font-size: 20px;" />
+                <ui:Label text="Path" display-tooltip-when-elided="true" name="pathLabel" class="PathLabel" style="font-size: 20px; white-space: normal; color: rgb(210, 210, 210);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Tree" style="flex-grow: 1;">
+            <ui:Label display-tooltip-when-elided="true" name="breadcrumbsLabel" text="File Path" style="font-size: 20px; white-space: normal; color: rgb(210, 210, 210);" />
+            <ui:Button text="Up one Folder" display-tooltip-when-elided="true" name="upFolderBtn" style="font-size: 20px;" />
+            <ui:ListView focusable="false" name="contentList" horizontal-scrolling="true" show-border="true" show-foldout-header="false" style="font-size: 20px; flex-grow: 1; background-color: rgb(0, 0, 0); width: auto; margin-left: 0; color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="m3Header" style="height: 150px; width: auto; flex-grow: 1; background-color: rgba(0, 0, 0, 0.53); flex-direction: row; position: relative; left: auto;">
+        <ui:VisualElement name="m3Submeshes" style="flex-grow: 1;">
+            <ui:Label text="Name" display-tooltip-when-elided="true" name="m3NameLbl" enable-rich-text="true" style="font-size: 20px; color: rgb(210, 210, 210);" />
+            <ui:Label text="Choose Submeshes" display-tooltip-when-elided="true" name="submeshChooseLbl" style="font-size: 20px; color: rgb(210, 210, 210);" />
+            <ui:VisualElement name="m3SubmeshOptions" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap;" />
+        </ui:VisualElement>
+        <ui:Button text="Export" display-tooltip-when-elided="true" name="reimportBtn" />
+    </ui:VisualElement>
+</ui:UXML>
